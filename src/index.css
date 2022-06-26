@@ -1,4 +1,9 @@
 @import-normalize; /* bring in normalize.css styles */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -12,4 +17,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root{
+  max-width: 320px;
+  padding: 15px;
+  margin: 0 auto;
 }
