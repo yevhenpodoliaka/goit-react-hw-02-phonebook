@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from "react"
 const Filter = ({ value, onChahgeFilter }) => {
 
@@ -9,5 +10,8 @@ const Filter = ({ value, onChahgeFilter }) => {
     
     );
 }
-
+Filter.propTypes = {
+    value: PropTypes.string,
+    onChahgeFilter:PropTypes.func,
+}
 export default Filter

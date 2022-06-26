@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import s from './ContactForm.module.css';
 class ContactForm extends Component {
@@ -6,6 +7,9 @@ class ContactForm extends Component {
     number: '',
   };
 
+  static propTypes = {
+  onSubmit:PropTypes.func,
+};
   handleChange = e => {
     const { name, value } = e.currentTarget;
 
@@ -48,7 +52,6 @@ class ContactForm extends Component {
             onChange={this.handleChange}
           />
         </label>
-
         <button className={s.button} type="submit">
           Add Contact
         </button>

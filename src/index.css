@@ -26,3 +26,7 @@ ul{
   padding: 15px;
   margin: 0 auto;
 }
+
+#root div{
+  border: 1px solid black;
+}
