@@ -18,7 +18,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+ul{
+  list-style: none;
+}
 #root{
   max-width: 320px;
   padding: 15px;
