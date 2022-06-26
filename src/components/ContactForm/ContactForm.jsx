@@ -8,16 +8,18 @@ class ContactForm extends Component {
 
   handleChange = e => {
     const { name, value } = e.currentTarget;
-    console.log(name);
+
     this.setState({ [name]: value });
   };
 
   handleSubmit = e => {
     e.preventDefault();
-
     this.props.onSubmit(this.state);
     this.setState({ name: '', number: '' });
   };
+  searchParam = e => {
+    
+  }
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
@@ -31,6 +33,7 @@ class ContactForm extends Component {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
             onChange={this.handleChange}
+          
           />
         </label>
         <label>
