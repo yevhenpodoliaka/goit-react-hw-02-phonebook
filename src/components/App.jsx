@@ -1,4 +1,4 @@
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
 import React, { Component } from 'react';
 import ContactForm from './ContactForm/ContactForm';
 import Contactlist from './ContactList/ContactList';
@@ -14,11 +14,13 @@ class App extends Component {
     filter: '',
   };
   addContact = contact => {
-    const contactNames = this.state.contacts.map(contact=>contact.name)
-    if (contactNames.includes(contact.name)) {
-      alert(`${contact.name} is already in contacts`)
-      return
-     
+    const { contacts } = this.state;
+    const name=contact.name.toLowerCase()
+    if (
+      contacts.find(el => el.name.toLowerCase() === name )
+    ) {
+      alert(`${contact.name} is already in contacts`);
+      return;
     }
     const newContact = {
       id: nanoid(),

@@ -21,9 +21,6 @@ class ContactForm extends Component {
     this.props.onSubmit(this.state);
     this.setState({ name: '', number: '' });
   };
-  searchParam = e => {
-    
-  }
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
